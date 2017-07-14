@@ -7,7 +7,7 @@ platform:
 environment:
   matrix:
     - ruby_version: "23-x64"
-    - ruby_version: "23"
+#    - ruby_version: "23"
 
 clone_folder: c:\projects\chef
 clone_depth: 1
@@ -16,6 +16,9 @@ branches:
   only:
     - master
     - chef-12
+    
+init:
+  - ps: if ($env:APPVEYOR_BUILD_WORKER_IMAGE -eq "Visual Studio 2015") {write-host "Uninstalling 4014507..."; cmd /c wusa /uninstall /kb:4014507 /quiet /forcerestart}
 
 install:
   - systeminfo
