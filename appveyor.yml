@@ -43,5 +43,5 @@ build_script:
   - bundle install || bundle install || bundle install
 
 test_script:
-  - SET SPEC_OPTS=--format progress
+  - SET SPEC_OPTS=--format documentation
   - bundle exec rake spec
