@@ -1,6 +1,6 @@
 version: "master-{build}"
 
-image: Visual Studio 2013
+image: Visual Studio 2015
 
 platform:
   - x64
